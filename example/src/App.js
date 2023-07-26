@@ -9,6 +9,7 @@ import colors from './styles/colors';
 import { IS_ANDROID } from './utils';
 import config from './utils/config';
 import { Group, Item } from './scenes/GroupAndItem';
+import DriveTheLine from './examples/Animations/DriveTheLine';
 import { ScreenWithoutMap } from './scenes/ScreenWithoutMap';
 
 LogBox.ignoreLogs([
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
   },
 });
 
-Mapbox.setAccessToken(config.get('accessToken'));
+Mapbox.setAccessToken('');
 
 const Stack = createNativeStackNavigator();
 
@@ -33,7 +34,7 @@ function AppStackNavigator() {
       initialRouteName="Group"
       screenOptions={{ gestureEnabled: false, headerShown: false }}
     >
-      <Stack.Screen name="Group" component={Group} />
+      <Stack.Screen name="Group" component={DriveTheLine} />
       <Stack.Screen name="Item" component={Item} />
       <Stack.Screen name="ScreenWithoutMap" component={ScreenWithoutMap} />
     </Stack.Navigator>

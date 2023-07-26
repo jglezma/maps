@@ -9,6 +9,7 @@ module.exports = (api) => {
     plugins: [
       '@babel/plugin-proposal-optional-chaining',
       '@babel/plugin-transform-modules-commonjs',
+      'react-native-reanimated/plugin',
       isWeb
         ? [
             'module-resolver',
